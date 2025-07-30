@@ -14,7 +14,7 @@ git switch branchName - 지정한 브랜치로 전환
 git switch -c branchName - 새 브랜치를 생성하고 동시에 전환
 git branch -d branchName - 브랜치 삭제 (머지된 브랜치만)
 echo "str" > fileName - 문자열을 파일에 쓰기 (덮어쓰기)
-git remote add origin git_url - 
+git remote add origin git_url - 로컬 Git 저장소에 'origin'이라는 이름으로 원격 저장소 URL을 연결하는 명령어
 git remote -v - 등록된 원격 저장소 목록을 URL과 함께 표시 (verbose)
 git branch -M main - 현재 브랜치의 이름을 'main'으로 변경 (강제로 이름 변경)
 git push -u origin main - 로컬의 'main' 브랜치를 원격 저장소 'origin'에 푸시하고, 업스트림 브랜치로 설정
