@@ -38,3 +38,8 @@ ssh-add ~/.ssh/id_ed25519 - 생성한 개인키를 SSH 에이전트에 등록
                             이후 SSH 연결 시 자동으로 이 키를 사용
 ssh-add -l - SSH 에이전트에 등록된 키 목록을 표시
              키가 제대로 등록되었는지 확인
+
+git fetch - 원격저장소의 최신 커밋을 가져옴(pull과 다르게 자동으로 merge는 하지 않는다.)
+git diff - 현재 최신 커밋과 원격 저장소에서 가져온 커밋의 차이를 확인
+# git diff HEAD origin/main - 로컬의 현재 브랜츠(HEAD)와 원격 저장소의 브랜치와읭 차이를 확인
+# git merge origin/main - fetch로 가져온 최신 커밋을 현재 브랜치에 merge한다.
