@@ -22,3 +22,16 @@ git push - 현재 브랜치의 변경사항을 설정된 업스트림 원격 저
 git pull -u origin main - 원격 저장소 'origin'의 'main' 브랜치를 풀하고 업스트림으로 설정
 git pull origin main - 단순히 풀을 하는 경우
 git pull - 업스트림이 설정된 경우
+ssh-keygen -t ed25519 -C "userEmail" - SSH 키 쌍(공개키/개인키)을 생성
+                                     -t ed25519: ed25519 암호화 알고리즘 사용 (현재 권장되는 보안 방식)
+                                     -C "userEmail": 키에 코멘트(라벨) 추가, 보통 이메일 주소 사용
+cd .ssh - SSH 관련 파일들이 저장되는 .ssh 디렉토리로 이동
+          보통 ~/.ssh 경로에 위치
+ls -la - 현재 디렉토리의 모든 파일과 폴더를 자세히 나열
+         생성된 SSH 키 파일들(id_ed25519, id_ed25519.pub) 확인 가능
+eval "$(ssh-agent -s)" - SSH 에이전트를 백그라운드에서 실행
+                         SSH 에이전트는 개인키를 메모리에 안전하게 보관하는 프로그램
+ssh-add ~/.ssh/id_ed25519 - 생성한 개인키를 SSH 에이전트에 등록
+                            이후 SSH 연결 시 자동으로 이 키를 사용
+ssh-add -l - SSH 에이전트에 등록된 키 목록을 표시
+             키가 제대로 등록되었는지 확인
