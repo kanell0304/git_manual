@@ -1,1 +1,16 @@
-11
+git init - 현재 디렉토리를 Git 저장소로 초기화
+git status - 현재 작업 디렉토리와 스테이징 영역의 상태 확인
+git add . - 현재 디렉토리의 모든 변경사항을 스테이징 영역에 추가
+git add "file name" - 특정 파일을 스테이징 영역에 추가
+git commit -m "msg" - 스테이징된 변경사항을 메시지와 함께 커밋
+git commit -am "msg" - 추적 중인 모든 파일의 변경사항을 자동으로 스테이징하고 커밋
+git log - 커밋 히스토리를 자세히 표시
+git log --oneline - 커밋 히스토리를 한 줄씩 간략하게 표시
+git log --oneline --branches (모든 브랜치의 커밋을 한 줄씩 표시)
+git log --oneline --branches --graph (모든 브랜치의 커밋을 그래프 형태)
+git branch - 현재 브랜치 목록 표시
+git branch branchName - 새로운 브랜치 생성
+git switch branchName - 지정한 브랜치로 전환
+git switch -c branchName - 새 브랜치를 생성하고 동시에 전환
+git branch -d branchName - 브랜치 삭제 (머지된 브랜치만)
+echo "str" > fileName - 문자열을 파일에 쓰기 (덮어쓰기)
